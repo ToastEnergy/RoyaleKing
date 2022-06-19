@@ -10,6 +10,7 @@ bot.on('inline_query', (ctx) => {
         id: 'hihihiha',
         audio_url: 'https://morbinguniversity-it.vercel.app/hihihiha.mp3',
         title: 'HIHIHIHA',
+        performer: 'Royale King',
     }]
     ctx.answerInlineQuery(result)
   })
