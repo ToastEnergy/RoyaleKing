@@ -1,12 +1,12 @@
 const { Telegraf } = require('telegraf');
-const emotes = require('./emotes');
+const emotes = require('./emotes.json');
 const config = require('./config');
 
 const bot = new Telegraf(config.token);
 bot.start((ctx) => ctx.reply("just tag me in a chat and i'll send the hihiha\n\nby @ssebastianoo & @chickenmatty"));
 
 bot.on('inline_query', (ctx) => {
-    const result = emotes.map(emote => {
+    const result = emotes.audioFiles.map(emote => {
       return {
         type: 'audio',
         id: emote.id,
